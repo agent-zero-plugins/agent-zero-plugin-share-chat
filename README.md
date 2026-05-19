@@ -1,2 +1,1 @@
-# agent-zero-plugin-share-chat
-Agent Zero plugin that adds a share button to copy a deep link to the current chat
+§§include(/a0/src/github.com/agent-zero-plugins/agent-zero-plugin-share-chat/README.md)
