@@ -1,0 +1,4 @@
+name: share_chat
+version: "0.1.0"
+summary: Adds a share button to copy a deep link to the current chat.
+env: []

@@ -1,0 +1,12 @@
+name: share_chat
+title: Share Chat
+description: |
+  Adds a share button to the top-right of the chat area that copies a deep
+  link to the current conversation to the clipboard.
+version: "0.1.0"
+author: "Interu <hello@interu.ai>"
+license: Apache-2.0
+homepage: https://github.com/agent-zero-plugins/agent-zero-plugin-share-chat
+per_project_config: false
+per_agent_config: false
+always_enabled: false
