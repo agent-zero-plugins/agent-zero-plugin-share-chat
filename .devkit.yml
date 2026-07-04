@@ -3,3 +3,4 @@ display_name: Share Chat
 # If the plugin has agent-driven behaviour needing an e2e seam, enable it here:
 # e2e_pod_env:
 #   A0_SHARE_CHAT_TEST_PROBE: "1"
+devkit_major: 2
