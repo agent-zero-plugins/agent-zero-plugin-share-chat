@@ -1,1 +1,30 @@
-§§include(/a0/src/github.com/agent-zero-plugins/agent-zero-plugin-share-chat/.gitignore)
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Node / Playwright (e2e)
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+.playwright-mcp/
+tests/e2e/.e2e/
+
+# Build output
+dist/
+build/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Temp / backups
+*.tmp
+*.bak

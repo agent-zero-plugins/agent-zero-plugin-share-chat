@@ -1,1 +1,26 @@
-§§include(/a0/src/github.com/agent-zero-plugins/agent-zero-plugin-share-chat/pyproject.toml)
+[project]
+name = "agent-zero-plugin-share-chat"
+description = "Agent Zero plugin: share button that copies a deep link to the current chat"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+
+[tool.ruff]
+target-version = "py311"
+line-length = 99
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests/_testkit/src"]
+# Exclude the devkit submodule's own self-tests (and its nested .agent-zero)
+# from consumer collection — they run in the devkit repo's CI, not here.
+norecursedirs = ["tests/_testkit", ".git", "node_modules", "tests/e2e"]
+markers = [
+  "unit: fast L0 tests, no subprocess, no network",
+  "component: L1 tests, A0 in-process or fixtures",
+]
