@@ -58,6 +58,43 @@ The deep link is **not** a public share page and grants **no access by itself**:
 
 See [SECURITY.md](SECURITY.md) for the full threat model.
 
+## Usage
+
+Every behaviour below is covered by a BDD scenario in [`tests/e2e/features/`](tests/e2e/features/),
+and [`docs/BEHAVIOUR.md`](docs/BEHAVIOUR.md) shows each one as a screenshot captured from a passing
+run — so what you read here is what CI proves on every push.
+
+### Share the chat you are looking at
+
+Click the share control in the chat toolbar. The link to the current chat goes straight to your
+clipboard, and the button confirms with a green *"Link copied!"* that reverts after ~2 seconds — so
+you know it worked without a dialog to dismiss.
+
+Paste it to a teammate, or to yourself on another device, and they land on **that** conversation
+rather than hunting the sidebar for "the one about the deploy".
+
+### What the link actually is
+
+```
+<your-a0-origin>/?ctxid=<chat-id>
+```
+
+Composed entirely client-side. **Nothing is stored, published, proxied, or sent anywhere** — there is
+no backend, no state and no token. The link is only as reachable as your A0 instance already is: if
+the recipient cannot reach your origin, or is not authenticated to it, the link does nothing for them.
+
+That is the deliberate trade-off. This plugin is a fast hand-off *within* an environment people
+already share, not a publishing tool. If you need a chat readable by someone with no access to your
+instance, this is the wrong plugin — export it instead.
+
+### Scope, stated honestly
+
+The suite asserts three scenarios: the control is present, sharing copies a link to *this* chat, and
+the copy is confirmed. That is the whole feature — it is small on purpose, and the coverage matches
+the surface rather than being padded to look thorough.
+
+---
+
 ## Install
 
 ### From the Plugin Hub
