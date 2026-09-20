@@ -1,4 +1,4 @@
-plugin_dir: usr/plugins/share_chat
+plugin_dir: .
 display_name: Share Chat
 # If the plugin has agent-driven behaviour needing an e2e seam, enable it here:
 # e2e_pod_env:
