@@ -32,7 +32,7 @@ and copies it to the clipboard. Being honest about the security properties:
 - **Token entropy / guessability of `ctxid`:** Agent Zero chat context ids are short
   (~8 char) random ids generated client- or server-side. They are identifiers, **not**
   secrets — Agent Zero's security boundary is its authentication layer, not ctxid secrecy.
-  Anyone already authenticated to the *same* instance could enumerate or guess chat ids;
+  Anyone already authenticated to the _same_ instance could enumerate or guess chat ids;
   the plugin does not change that pre-existing property.
 - **Exposure surface = your instance's exposure.** If your A0 instance is exposed on a LAN or
   the internet without auth, the link points anyone straight at your conversation. That risk
@@ -51,7 +51,7 @@ and copies it to the clipboard. Being honest about the security properties:
   (prevents accidentally re-sharing tokens that were in your current URL).
 - No-op when no chat is selected (`getContext()` falsy → return).
 - No network calls, no storage, no server-side component — the audit surface is a single
-  ~150-line declarative HTML file: `usr/plugins/share_chat/extensions/webui/chat-top-end/share-chat.html`.
+  ~150-line declarative HTML file: `extensions/webui/chat-top-end/share-chat.html`.
 
 ## Supported versions
 

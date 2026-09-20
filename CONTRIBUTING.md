@@ -16,13 +16,13 @@ If you cloned without `--recursive`, run `git submodule update --init --recursiv
 
 ## Repo layout
 
-| Path | What |
-|---|---|
-| `usr/plugins/share_chat/` | The plugin itself (manifests + one HTML extension) |
-| `docs/spec/` | Behaviour contract (BEH-N), implementation plan, e2e spec docs |
-| `tests/component/` | L1 shape suite (testkit assertions, fast, no A0 boot) |
-| `tests/e2e/features/` + `tests/e2e/steps/` | Behaviour-first BDD (Gherkin + Playwright steps) |
-| `tests/_testkit/` | Devkit submodule — runner, gates, shared steps. Do not edit here; PR the devkit repo. |
+| Path                                       | What                                                                                  |
+| ------------------------------------------ | ------------------------------------------------------------------------------------- |
+| repo root                                  | The plugin itself (root layout — manifests + one HTML extension)                      |
+| `docs/spec/`                               | Behaviour contract (BEH-N), implementation plan, e2e spec docs                        |
+| `tests/component/`                         | L1 shape suite (testkit assertions, fast, no A0 boot)                                 |
+| `tests/e2e/features/` + `tests/e2e/steps/` | Behaviour-first BDD (Gherkin + Playwright steps)                                      |
+| `tests/_testkit/`                          | Devkit submodule — runner, gates, shared steps. Do not edit here; PR the devkit repo. |
 
 ## Workflow
 
@@ -48,8 +48,7 @@ If you cloned without `--recursive`, run `git submodule update --init --recursiv
 
 - **No fake green.** Never wrap an assertion in `try/catch` to pass, never add a bare `@skip`
   — skips need a tracked issue link.
-- **Version bumps:** keep `usr/plugins/share_chat/plugin.yaml` and `meta.yaml` versions in
-  sync.
+- **Version bumps:** keep `plugin.yaml` and `meta.yaml` versions in sync.
 - **License:** contributions are accepted under [Apache-2.0](LICENSE).
 - **No secrets** — this plugin has no credentials and it must stay that way. CI and the
   static validator scan for committed secrets.
