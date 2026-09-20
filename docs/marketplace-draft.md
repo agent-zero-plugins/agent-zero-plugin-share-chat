@@ -30,7 +30,7 @@ screenshots:
 
 ## Thumbnail
 
-Copy `usr/plugins/share_chat/webui/thumbnail.png` (256×256 square, ~3.3 KB < 20 KB ✓)
+Copy `webui/thumbnail.png` (256×256 square, ~3.3 KB < 20 KB ✓)
 to `plugins/share_chat/thumbnail.png` in the index PR.
 
 ## Pre-submission checklist (flip-time)
