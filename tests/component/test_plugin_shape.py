@@ -72,7 +72,8 @@ def test_license_declared_apache2(plugin_dir: Path) -> None:
     plugin = yaml.safe_load((plugin_dir / "plugin.yaml").read_text())
     assert plugin.get("license") == "Apache-2.0"
 
-    license_file = plugin_dir.parent.parent.parent / "LICENSE"
+    # Root layout: the repo root IS the plugin dir, so LICENSE sits beside plugin.yaml.
+    license_file = plugin_dir / "LICENSE"
     text = license_file.read_text()
     assert "Apache License" in text and "Version 2.0" in text
     assert len(text) > 10_000, f"LICENSE is a stub ({len(text)} bytes)"
