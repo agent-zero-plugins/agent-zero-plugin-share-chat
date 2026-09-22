@@ -44,7 +44,7 @@ permissions:
 
 jobs:
   e2e:
-    uses: agent-zero-plugins/agent-zero-plugin-development-testkit/.github/workflows/plugin-e2e.yml@v2.1.6
+    uses: agent-zero-plugins/agent-zero-plugin-development-testkit/.github/workflows/plugin-e2e.yml@v2.2.0
     secrets:
       GHCR_PULL_TOKEN: ${{ secrets.GHCR_PULL_TOKEN }}
       SKILLS_SYNC_APP_CLIENT_ID: ${{ secrets.SKILLS_SYNC_APP_CLIENT_ID }}
